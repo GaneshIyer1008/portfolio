@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Iyer | Robotics Engineer</title>
+    <meta name="description" content="Portfolio of Ganesh Iyer, Master's Student in Robotics, Systems and Control at ETH Zürich.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=calistoga&family=inter:wght@300;400;500;600&family=playfair+display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">GI.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://github.com/GaneshIyer1008" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+            <div class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-title">Ganesh Iyer</h1>
+            <h2 class="hero-subtitle">Robotics, Systems & Control <br> Master's Student at <span class="highlight">ETH Zürich</span></h2>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-background-element"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container about-container">
+            <div class="about-image-wrapper">
+                <img src="assets/img/ganesh_photo.jpg" alt="Ganesh Iyer" class="profile-photo">
+                <div class="photo-decor"></div>
+            </div>
+            <div class="about-text">
+                <h3 class="section-label">About Me</h3>
+                <h2 class="section-title">Bridging Theory & <br> Real-World Robotics</h2>
+                <p class="about-bio">
+                    I am currently pursuing a <strong>Master of Science in Robotics, Systems and Control</strong> at <strong>ETH Zürich</strong> (2025-2027). 
+                    Previously, I graduated with Honors in Mechanical Engineering from <strong>IIT Bombay</strong>, securing a Department Rank of 2 out of 196.
+                </p>
+                <p class="about-bio">
+                    My passion lies in <strong>Legged Robotics</strong> and <strong>Control Systems</strong>. I specialize in combining model-based operational space control with learning-based methods (RL) to create robust, dynamic locomotion.
+                </p>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">Python & C++</div>
+                    <div class="skill-item">MATLAB</div>
+                    <div class="skill-item">bROS2 & Docker</div>
+                    <div class="skill-item">NVIDIA Isaac Gym</div>
+                    <div class="skill-item">PyTorch</div>
+                    <div class="skill-item">Control Theory</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-label">Selected Works</h3>
+                <h2 class="section-title">Projects & Research</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Robotics</span>
+                            <span class="tag">Path Planning</span>
+                        </div>
+                        <h3 class="project-title">Voronoi-Superquadrics Planner</h3>
+                        <p class="project-desc">
+                            Developed a novel algorithm combining Voronoi diagrams with Superquadric obstacle representation for safe and efficient path planning in complex environments.
+                        </p>
+                        <ul class="project-links">
+                            <li><a href="https://github.com/synergylab-ntu/Voronoi-Superquadrics" target="_blank">View Code &rarr;</a></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Simulation</span>
+                            <span class="tag">Robot Learning</span>
+                        </div>
+                        <h3 class="project-title">IsaacLab</h3>
+                        <p class="project-desc">
+                            A unified framework for robot learning built on NVIDIA Isaac Sim. Designed to accelerate the development and testing of robotic control algorithms in high-fidelity simulation.
+                        </p>
+                        <ul class="project-links">
+                            <li><a href="https://github.com/GaneshIyer1008/IsaacLab" target="_blank">View Code &rarr;</a></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Control</span>
+                            <span class="tag">Koopman Theory</span>
+                        </div>
+                        <h3 class="project-title">Koopman/DMD Control</h3>
+                        <p class="project-desc">
+                            Bachelor Thesis Project exploring Koopman theory and Dynamic Mode Decomposition (DMD) for controlling non-linear dynamical systems, applied to manipulators and soft robots.
+                        </p>
+                        <ul class="project-links">
+                            <li><a href="https://github.com/GaneshIyer1008" target="_blank">View Profile &rarr;</a></li>
+                        </ul>
+                    </div>
+                </article>
+
+                 <!-- Project 4 (Warehouse) -->
+                 <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">UAV</span>
+                            <span class="tag">ROS2</span>
+                        </div>
+                        <h3 class="project-title">Warehouse Drone Navigation</h3>
+                        <p class="project-desc">
+                            e-Yantra Robotics Competition entry (Rank 40/3000+). Implemented PID control and A* motion planning for a drone in a warehouse enviroment using ROS2 and Gazebo.
+                        </p>
+                        <ul class="project-links">
+                            <li><a href="#" target="_blank">View Details &rarr;</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification/Experience Brief -->
+    <section class="section experience-section">
+        <div class="container">
+            <h3 class="section-label">Experience</h3>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="exp-date">Jun 2025 - Jul 2025</div>
+                    <div class="exp-details">
+                        <h4>Research Intern</h4>
+                        <div class="exp-company">xTerra Robotics</div>
+                        <p>Quadruped locomotion control (Sim2Real, RL + Model-based).</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-date">May 2024 - Jul 2024</div>
+                    <div class="exp-details">
+                        <h4>Global Connect Fellow</h4>
+                        <div class="exp-company">Nanyang Technological University (NTU)</div>
+                        <p>Voronoi diagram based path planning for Superquadric obstacles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container footer-container">
+            <div class="footer-cta">
+                <h2>Let's Connect</h2>
+                <p>Always open to discussing robotics, control theory, or new collaborations.</p>
+                <a href="mailto:omkaar0791@gmail.com" class="email-link">omkaar0791@gmail.com</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ganesh-iyer-62a360226/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/GaneshIyer1008" target="_blank">GitHub</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Ganesh Iyer. Built with <span style="color:red">&hearts;</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
