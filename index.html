@@ -3,76 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganesh Iyer | Robotics Engineer</title>
-    <meta name="description" content="Portfolio of Ganesh Iyer, Master's Student in Robotics, Systems and Control at ETH Zürich.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ganesh Iyer | Robotics & Robot Learning</title>
+    <meta name="description" content="Portfolio of Ganesh Iyer - Robotics Masters Student at ETH Zürich, specializing in RL, Robot Learning, and Legged Robots.">
+    <meta name="keywords" content="robotics, robot learning, reinforcement learning, legged robots, ETH Zurich">
+    <meta name="author" content="Ganesh Iyer">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=calistoga&family=inter:wght@300;400;500;600&family=playfair+display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     
-    <!-- Styles -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body>
-    
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation">
         <div class="container nav-container">
-            <a href="#" class="logo">GI.</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://github.com/GaneshIyer1008" target="_blank" rel="noopener">GitHub</a></li>
+            <a href="#" class="logo" aria-label="Ganesh Iyer Portfolio">GI</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="menu-toggle" aria-label="Toggle navigation">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
+        <div class="hero-gradient"></div>
         <div class="container hero-content">
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-title">Ganesh Iyer</h1>
-            <h2 class="hero-subtitle">Robotics, Systems & Control <br> Master's Student at <span class="highlight">ETH Zürich</span></h2>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <div class="hero-text" data-animate="fade-in">
+                <p class="hero-greeting">Welcome, I'm</p>
+                <h1 class="hero-title">Ganesh Iyer</h1>
+                <p class="hero-subtitle">Robotics Masters Student @ <span class="accent-text">ETH Zürich</span></p>
+                <p class="hero-tagline">Specializing in Reinforcement Learning, Robot Learning & Legged Robots</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image" data-animate="fade-in">
+                <img src="assets/img/Ganesh_Professional.jpeg" alt="Ganesh Iyer" class="profile-pic">
             </div>
         </div>
-        <div class="hero-background-element"></div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section about-section">
-        <div class="container about-container">
-            <div class="about-image-wrapper">
-                <img src="assets/img/ganesh_photo.jpg" alt="Ganesh Iyer" class="profile-photo">
-                <div class="photo-decor"></div>
+        <div class="container">
+            <div class="section-header" data-animate="slide-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about robotics and intelligent systems</p>
             </div>
-            <div class="about-text">
-                <h3 class="section-label">About Me</h3>
-                <h2 class="section-title">Bridging Theory & <br> Real-World Robotics</h2>
-                <p class="about-bio">
-                    I am currently pursuing a <strong>Master of Science in Robotics, Systems and Control</strong> at <strong>ETH Zürich</strong> (2025-2027). 
-                    Previously, I graduated with Honors in Mechanical Engineering from <strong>IIT Bombay</strong>, securing a Department Rank of 2 out of 196.
-                </p>
-                <p class="about-bio">
-                    My passion lies in <strong>Legged Robotics</strong> and <strong>Control Systems</strong>. I specialize in combining model-based operational space control with learning-based methods (RL) to create robust, dynamic locomotion.
-                </p>
-                
-                <div class="skills-grid">
-                    <div class="skill-item">Python & C++</div>
-                    <div class="skill-item">MATLAB</div>
-                    <div class="skill-item">bROS2 & Docker</div>
-                    <div class="skill-item">NVIDIA Isaac Gym</div>
-                    <div class="skill-item">PyTorch</div>
-                    <div class="skill-item">Control Theory</div>
+            
+            <div class="about-grid">
+                <div class="about-text" data-animate="slide-up">
+                    <h3 class="about-heading">Who I Am</h3>
+                    <p class="about-paragraph">
+                        I'm a <strong>Master's student in Robotics, Systems & Control at ETH Zürich</strong> (2025-2027), 
+                        with a passion for <strong>Reinforcement Learning</strong>, <strong>Robot Learning</strong>, and 
+                        <strong>Legged Robots</strong>. My research focuses on combining classical control theory with modern deep learning 
+                        to create robots that can learn and adapt in dynamic environments.
+                    </p>
+                    <p class="about-paragraph">
+                        Previously, I graduated with honors in Mechanical Engineering from <strong>IIT Bombay</strong> 
+                        (Rank 2/196), where I developed a strong foundation in dynamics, control systems, and robotics.
+                    </p>
+                    <p class="about-paragraph highlight-box">
+                        <strong>Core Interests:</strong> Legged locomotion, sim-to-real transfer, learning-based control, 
+                        motion planning, and the intersection of classical and learning-based robotics.
+                    </p>
+                </div>
+
+                <div class="skills-section" data-animate="slide-up">
+                    <h3 class="skills-heading">Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-badge">Python</div>
+                        <div class="skill-badge">NVIDIA IsaacSim</div>
+                        <div class="skill-badge">NVIDIA IsaacLab</div>
+                        <div class="skill-badge">PyTorch</div>
+                        <div class="skill-badge">C++</div>
+                        <div class="skill-badge">ROS2</div>
+                        <div class="skill-badge">Control Theory</div>
+                        <div class="skill-badge">Reinforcement Learning</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,76 +108,84 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects-section">
         <div class="container">
-            <div class="section-header">
-                <h3 class="section-label">Selected Works</h3>
-                <h2 class="section-title">Projects & Research</h2>
+            <div class="section-header" data-animate="slide-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Research & Engineering work</p>
             </div>
-            
+
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <div class="project-content">
+                <!-- Project 1: Xterra Robotics -->
+                <article class="project-card" data-animate="fade-in">
+                    <div class="project-inner">
                         <div class="project-tags">
                             <span class="tag">Robotics</span>
+                            <span class="tag">RL</span>
+                            <span class="tag">Legged Robots</span>
+                        </div>
+                        <h3 class="project-title">Xterra Robotics - RL Internship</h3>
+                        <p class="project-description">
+                            Developing reinforcement learning algorithms for quadruped locomotion control. 
+                            Focus on sim-to-real transfer and learning-based motion control.
+                        </p>
+                        <ul class="project-links">
+                            <li><a href="#" class="link-arrow" target="_blank">More Details →</a></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 2: NOMADZ RoboCup -->
+                <article class="project-card" data-animate="fade-in">
+                    <div class="project-inner">
+                        <div class="project-tags">
+                            <span class="tag">RoboCup</span>
+                            <span class="tag">Motion Control</span>
+                            <span class="tag">Humanoid</span>
+                        </div>
+                        <h3 class="project-title">NOMADZ RoboCup Motion Control</h3>
+                        <p class="project-description">
+                            Implemented advanced motion control algorithms for humanoid robot soccer. 
+                            Optimized gait planning and real-time trajectory control.
+                        </p>
+                        <ul class="project-links">
+                            <li><a href="#" class="link-arrow" target="_blank">More Details →</a></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 3: ETH Course Projects -->
+                <article class="project-card" data-animate="fade-in">
+                    <div class="project-inner">
+                        <div class="project-tags">
+                            <span class="tag">Education</span>
+                            <span class="tag">Research</span>
+                            <span class="tag">Multiple Projects</span>
+                        </div>
+                        <h3 class="project-title">ETH Course Projects</h3>
+                        <p class="project-description">
+                            Collection of advanced robotics and control projects from ETH courses including:
+                            Legged Robot Control, Learning for Robotics, Motion Planning, and Advanced Control Theory.
+                        </p>
+                        <ul class="project-links">
+                            <li><a href="#" class="link-arrow" target="_blank">More Details →</a></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 4: NTU Singapore -->
+                <article class="project-card" data-animate="fade-in">
+                    <div class="project-inner">
+                        <div class="project-tags">
                             <span class="tag">Path Planning</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Research</span>
                         </div>
-                        <h3 class="project-title">Voronoi-Superquadrics Planner</h3>
-                        <p class="project-desc">
-                            Developed a novel algorithm combining Voronoi diagrams with Superquadric obstacle representation for safe and efficient path planning in complex environments.
+                        <h3 class="project-title">NTU Singapore Project</h3>
+                        <p class="project-description">
+                            Global Connect Fellow project at Nanyang Technological University. 
+                            Worked on advanced planning and perception algorithms for autonomous systems.
                         </p>
                         <ul class="project-links">
-                            <li><a href="https://github.com/synergylab-ntu/Voronoi-Superquadrics" target="_blank">View Code &rarr;</a></li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Simulation</span>
-                            <span class="tag">Robot Learning</span>
-                        </div>
-                        <h3 class="project-title">IsaacLab</h3>
-                        <p class="project-desc">
-                            A unified framework for robot learning built on NVIDIA Isaac Sim. Designed to accelerate the development and testing of robotic control algorithms in high-fidelity simulation.
-                        </p>
-                        <ul class="project-links">
-                            <li><a href="https://github.com/GaneshIyer1008/IsaacLab" target="_blank">View Code &rarr;</a></li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Control</span>
-                            <span class="tag">Koopman Theory</span>
-                        </div>
-                        <h3 class="project-title">Koopman/DMD Control</h3>
-                        <p class="project-desc">
-                            Bachelor Thesis Project exploring Koopman theory and Dynamic Mode Decomposition (DMD) for controlling non-linear dynamical systems, applied to manipulators and soft robots.
-                        </p>
-                        <ul class="project-links">
-                            <li><a href="https://github.com/GaneshIyer1008" target="_blank">View Profile &rarr;</a></li>
-                        </ul>
-                    </div>
-                </article>
-
-                 <!-- Project 4 (Warehouse) -->
-                 <article class="project-card">
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">UAV</span>
-                            <span class="tag">ROS2</span>
-                        </div>
-                        <h3 class="project-title">Warehouse Drone Navigation</h3>
-                        <p class="project-desc">
-                            e-Yantra Robotics Competition entry (Rank 40/3000+). Implemented PID control and A* motion planning for a drone in a warehouse enviroment using ROS2 and Gazebo.
-                        </p>
-                        <ul class="project-links">
-                            <li><a href="#" target="_blank">View Details &rarr;</a></li>
+                            <li><a href="#" class="link-arrow" target="_blank">More Details →</a></li>
                         </ul>
                     </div>
                 </article>
@@ -158,49 +193,88 @@
         </div>
     </section>
 
-    <!-- Qualification/Experience Brief -->
-    <section class="section experience-section">
+    <!-- Publications Section -->
+    <section id="publications" class="section publications-section">
         <div class="container">
-            <h3 class="section-label">Experience</h3>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <div class="exp-date">Jun 2025 - Jul 2025</div>
-                    <div class="exp-details">
-                        <h4>Research Intern</h4>
-                        <div class="exp-company">xTerra Robotics</div>
-                        <p>Quadruped locomotion control (Sim2Real, RL + Model-based).</p>
+            <div class="section-header" data-animate="slide-up">
+                <h2 class="section-title">Publications & Research</h2>
+                <p class="section-subtitle">
+                    Find my research on <a href="https://scholar.google.com/citations?user=gVqKmrsAAAAJ&hl=en" target="_blank" class="scholar-link">Google Scholar</a>
+                </p>
+            </div>
+
+            <div class="publications-list">
+                <article class="publication-item" data-animate="slide-up">
+                    <div class="pub-header">
+                        <h3 class="pub-title">Coming Soon</h3>
+                        <p class="pub-meta">Research publications will be updated as they become available</p>
                     </div>
+                    <p class="pub-description">
+                        Currently working on research projects related to reinforcement learning for legged robot control 
+                        and sim-to-real transfer. Stay tuned for upcoming publications!
+                    </p>
+                    <div class="pub-links">
+                        <a href="https://scholar.google.com/citations?user=gVqKmrsAAAAJ&hl=en" class="link-external" target="_blank">
+                            View on Google Scholar →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header" data-animate="slide-up">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">I'm always interested in discussing robotics, research, and collaboration opportunities</p>
+            </div>
+
+            <div class="contact-content" data-animate="fade-in">
+                <div class="contact-text">
+                    <p class="contact-message">
+                        Whether you want to discuss legged robot control, reinforcement learning applications, 
+                        or potential collaboration opportunities, feel free to reach out!
+                    </p>
                 </div>
-                <div class="experience-item">
-                    <div class="exp-date">May 2024 - Jul 2024</div>
-                    <div class="exp-details">
-                        <h4>Global Connect Fellow</h4>
-                        <div class="exp-company">Nanyang Technological University (NTU)</div>
-                        <p>Voronoi diagram based path planning for Superquadric obstacles.</p>
-                    </div>
+
+                <div class="social-links">
+                    <a href="mailto:omkaar0791@gmail.com" class="social-icon email-icon" title="Email" aria-label="Send email">
+                        <span class="icon-symbol">✉</span>
+                        <span class="icon-label">Email</span>
+                    </a>
+                    <a href="https://github.com/GaneshIyer1008" target="_blank" rel="noopener noreferrer" class="social-icon github-icon" title="GitHub" aria-label="GitHub Profile">
+                        <span class="icon-symbol">⚙</span>
+                        <span class="icon-label">GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ganesh-iyer-62a360226/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin-icon" title="LinkedIn" aria-label="LinkedIn Profile">
+                        <span class="icon-symbol">in</span>
+                        <span class="icon-label">LinkedIn</span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=gVqKmrsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="social-icon scholar-icon" title="Google Scholar" aria-label="Google Scholar Profile">
+                        <span class="icon-symbol">🎓</span>
+                        <span class="icon-label">Scholar</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container footer-container">
-            <div class="footer-cta">
-                <h2>Let's Connect</h2>
-                <p>Always open to discussing robotics, control theory, or new collaborations.</p>
-                <a href="mailto:omkaar0791@gmail.com" class="email-link">omkaar0791@gmail.com</a>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/ganesh-iyer-62a360226/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/GaneshIyer1008" target="_blank">GitHub</a>
-            </div>
-            <div class="copyright">
-                &copy; 2025 Ganesh Iyer. Built with <span style="color:red">&hearts;</span>
-            </div>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-text">
+                © 2026 Ganesh Iyer. Crafted with <span class="heart">❤</span> for robotics enthusiasts.
+            </p>
+            <p class="footer-credit">
+                Built with HTML, CSS & JavaScript. Dark theme with smooth animations.
+            </p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node modules (if ever used)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment
+.env
+.env.local
