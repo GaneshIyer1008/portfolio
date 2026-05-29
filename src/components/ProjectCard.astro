@@ -1,0 +1,119 @@
+---
+import VideoEmbed from './VideoEmbed.astro';
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+const { project: p } = Astro.props;
+const hasMedia = Boolean(p.video || p.videoSoon);
+---
+<article class:list={['card project', { featured: p.featured, 'has-media': hasMedia }]} data-reveal>
+  {hasMedia && (
+    <div class="media">
+      {p.video ? (
+        <VideoEmbed video={p.video} />
+      ) : (
+        <div class="soon"><span>🎬 Video coming soon</span></div>
+      )}
+    </div>
+  )}
+
+  <div class="body">
+    <p class="ctx">
+      {p.contextUrl ? (
+        <a href={p.contextUrl} target="_blank" rel="noopener">{p.context}</a>
+      ) : (
+        <span>{p.context}</span>
+      )}
+      <span class="period">{p.period}</span>
+    </p>
+    <h3>{p.title}</h3>
+    <p class="summary">{p.summary}</p>
+    <ul class="highlights">
+      {p.highlights.map((h) => <li>{h}</li>)}
+    </ul>
+    <div class="tags">
+      {p.tags.map((t) => <span class="tag">{t}</span>)}
+    </div>
+    {p.links && (
+      <div class="links">
+        {p.links.map((l) => (
+          <a href={l.href} class="link" target="_blank" rel="noopener">{l.label} ↗</a>
+        ))}
+      </div>
+    )}
+  </div>
+</article>
+
+<style>
+  .project {
+    padding: clamp(1.2rem, 3vw, 1.6rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  }
+  .project:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
+
+  /* Featured (video) projects span the full row, media beside text */
+  .featured.has-media {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: clamp(1.2rem, 3vw, 2rem);
+    align-items: center;
+  }
+
+  .ctx {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--fg-strong);
+  }
+  .period { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); }
+
+  h3 { font-size: 1.25rem; margin-top: 0.5rem; }
+  .summary { color: var(--fg); margin-top: 0.5rem; }
+
+  .highlights { list-style: none; margin-top: 0.9rem; display: grid; gap: 0.5rem; }
+  .highlights li {
+    position: relative;
+    padding-left: 1.25rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0.1rem;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1rem; }
+  .links { margin-top: 0.9rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+  .link { font-size: 0.9rem; font-weight: 500; }
+
+  .soon {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius);
+    border: 1px dashed var(--border-strong);
+    background: var(--bg-soft);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 820px) {
+    .featured.has-media { grid-template-columns: 1fr; }
+    .featured.has-media .media { order: -1; }
+  }
+</style>

@@ -1,0 +1,86 @@
+---
+import Section from './Section.astro';
+import { profile } from '../data/profile';
+---
+<Section id="about" eyebrow="01 — About" title="About me">
+  <div class="about">
+    <div class="bio" data-reveal>
+      {profile.bio.map((p) => <p>{p}</p>)}
+      <ul class="focus">
+        {profile.focus.map((f) => (
+          <li><span class="dot" aria-hidden="true"></span>{f}</li>
+        ))}
+      </ul>
+    </div>
+
+    <aside class="edu card" data-reveal>
+      <h3>Education</h3>
+      <ul>
+        {profile.education.map((e) => (
+          <li class="edu-item">
+            <span class="edu-school">{e.school}</span>
+            <span class="edu-degree">{e.degree}</span>
+            <span class="edu-period">{e.period}</span>
+            <span class="edu-detail">{e.detail}</span>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  </div>
+</Section>
+
+<style>
+  .about {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+  }
+  .bio p { color: var(--muted); margin-bottom: 1rem; max-width: 62ch; }
+  .bio p:first-child { color: var(--fg); font-size: 1.08rem; }
+
+  .focus {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.4rem;
+  }
+  .focus li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--fg-strong);
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg-elev);
+  }
+  .dot { width: 7px; height: 7px; border-radius: 999px; background: var(--accent); }
+
+  .edu { padding: 1.4rem 1.5rem; }
+  .edu h3 { font-size: 1.05rem; margin-bottom: 1rem; }
+  .edu ul { list-style: none; display: grid; gap: 1.2rem; }
+  .edu-item { display: grid; gap: 0.15rem; position: relative; padding-left: 1rem; }
+  .edu-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    bottom: 0.1rem;
+    width: 2px;
+    border-radius: 2px;
+    background: var(--accent);
+    opacity: 0.55;
+  }
+  .edu-school { font-weight: 600; color: var(--fg-strong); }
+  .edu-degree { font-size: 0.92rem; }
+  .edu-period { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); }
+  .edu-detail { font-size: 0.86rem; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    .about { grid-template-columns: 1fr; }
+  }
+</style>

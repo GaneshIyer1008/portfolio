@@ -1,0 +1,63 @@
+---
+import { profile } from '../data/profile';
+import { withBase } from '../lib/base';
+import Socials from './Socials.astro';
+
+const cv = withBase('cv.pdf');
+---
+<section id="contact" class="contact">
+  <div class="container inner" data-reveal>
+    <span class="eyebrow">07 — Contact</span>
+    <h2>Let's build something that moves.</h2>
+    <p>
+      I'm open to research collaborations, internships, and conversations about robot learning
+      and legged/humanoid robotics. Email is the fastest way to reach me.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href={profile.socials.email}>Email me</a>
+      <a class="btn btn-ghost" href={cv} target="_blank" rel="noopener">Download CV</a>
+    </div>
+    <Socials size="md" />
+  </div>
+
+  <footer class="footer">
+    <div class="container foot">
+      <span>© 2026 {profile.name}</span>
+      <span class="built">Built with Astro · deployed on GitHub Pages</span>
+    </div>
+  </footer>
+</section>
+
+<style>
+  .contact { padding-top: var(--section-y); }
+  .inner {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    padding-bottom: var(--section-y);
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .inner h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+  .inner p { color: var(--muted); max-width: 56ch; }
+  .cta { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-top: 0.4rem; }
+
+  .footer { border-top: 1px solid var(--border); }
+  .foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.5rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>

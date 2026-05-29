@@ -1,0 +1,55 @@
+---
+// Light/dark toggle. Reads/writes localStorage('theme'); the no-flash script
+// in Base.astro applies it before paint.
+---
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light/dark theme" title="Toggle theme">
+  <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+  </svg>
+  <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="4.2" />
+    <line x1="12" y1="2" x2="12" y2="5" />
+    <line x1="12" y1="19" x2="12" y2="22" />
+    <line x1="2" y1="12" x2="5" y2="12" />
+    <line x1="19" y1="12" x2="22" y2="12" />
+    <line x1="4.6" y1="4.6" x2="6.7" y2="6.7" />
+    <line x1="17.3" y1="17.3" x2="19.4" y2="19.4" />
+    <line x1="4.6" y1="19.4" x2="6.7" y2="17.3" />
+    <line x1="17.3" y1="6.7" x2="19.4" y2="4.6" />
+  </svg>
+</button>
+
+<style>
+  .theme-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    background: var(--bg-elev);
+    color: var(--fg);
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition), background var(--transition);
+  }
+  .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+  .icon { width: 18px; height: 18px; }
+  .icon-moon { display: block; }
+  .icon-sun { display: none; }
+  :global(html[data-theme='dark']) .icon-moon { display: none; }
+  :global(html[data-theme='dark']) .icon-sun { display: block; }
+</style>
+
+<script>
+  const btn = document.getElementById('themeToggle');
+  btn?.addEventListener('click', () => {
+    const isDark = document.documentElement.dataset.theme === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch (e) {
+      /* ignore */
+    }
+  });
+</script>

@@ -1,0 +1,37 @@
+---
+import Section from './Section.astro';
+import { skills } from '../data/skills';
+---
+<Section id="skills" eyebrow="05 — Toolbox" title="Skills & tools">
+  <div class="groups">
+    {
+      skills.map((g) => (
+        <div class="group card" data-reveal>
+          <h3>{g.group}</h3>
+          <div class="items">
+            {g.items.map((i) => <span class="tag">{i}</span>)}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Section>
+
+<style>
+  .groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.1rem;
+  }
+  .group { padding: 1.3rem 1.4rem; }
+  .group h3 {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .items { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+</style>

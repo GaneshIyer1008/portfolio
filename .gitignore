@@ -1,15 +1,23 @@
-# VS Code
-.vscode/
+# dependencies
+node_modules/
 
-# OS
+# build output
+dist/
+
+# astro
+.astro/
+
+# env
+.env
+.env.production
+
+# logs
+*.log
+npm-debug.log*
+
+# os / editor
 .DS_Store
 Thumbs.db
+.vscode/
 
-# Node modules (if ever used)
-node_modules/
-package-lock.json
-yarn.lock
-
-# Environment
-.env
-.env.local
+# NOTE: package-lock.json is intentionally committed for reproducible CI builds
