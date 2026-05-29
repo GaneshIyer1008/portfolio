@@ -27,8 +27,8 @@
   --font-display: 'Space Grotesk', var(--font-sans);
   --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
 
-  /* Layout */
-  --container: 1280px;
+  /* Layout — fluid: scales with the viewport, capped on ultrawide for readability */
+  --container: clamp(60rem, 92vw, 110rem); /* ~960px .. 92vw .. 1760px */
   --nav-h: 64px;
   --radius-sm: 8px;
   --radius: 14px;
