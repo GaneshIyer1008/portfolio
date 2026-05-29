@@ -43,7 +43,7 @@ export const projects: Project[] = [
       'Assembled the SO-101 arm and collected ~200 teleoperated demonstrations, each performing three sub-tasks in succession: grasp a corner, first fold, second fold.',
       'Trained a multi-task DiT policy (LeRobot): CLIP vision + text encoders condition a Diffusion Transformer that predicts action chunks from a single wrist-camera RGB feed and the language instruction.',
       'Curated consistent demonstrations (similar joint trajectories, start and cloth positions, smooth motion) so the policy could learn all three stages.',
-      'Deployed on the real robot with asynchronous inference on a local RTX 4060 (8 GB): policy server at 5 FPS, robot client at 15 FPS to hide inference latency.',
+      'Deployed on the real robot with asynchronous inference on a local RTX 4060 (8 GB): policy server at 5 FPS and robot client at 15 FPS, within the limits of the local hardware’s inference latency.',
     ],
     tags: ['Diffusion Policy', 'Imitation Learning', 'LeRobot', 'Manipulation'],
     video: { youtubeId: 'KXIX6n430TI' },
