@@ -68,5 +68,6 @@ export const projects: Project[] = [
       posterId: 'W7_cKB-Tfqw',
       title: 'Results across KITTI, Malaga, Parking & Polybahn',
     },
+    links: [{ label: 'Code — GitHub', href: 'https://github.com/GaneshIyer1008/VAMR-Monocular-VO-Mini-Project' }],
   },
 ];

@@ -45,6 +45,7 @@ export const experience: Experience[] = [
     tags: ['Path Planning', 'Computer Vision', 'Superquadrics', 'Voronoi'],
     image: 'voronoi.png',
     links: [
+      { label: 'Code — GitHub', href: 'https://github.com/synergylab-ntu/Voronoi-Superquadrics' },
       {
         label: 'Resulting paper — ROBIO 2025',
         href: 'https://scholar.google.com/citations?user=gVqKmrsAAAAJ&hl=en',
