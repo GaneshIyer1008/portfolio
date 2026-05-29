@@ -10,12 +10,13 @@ const isPlaylist = 'playlistId' in video;
 const embed = isPlaylist
   ? `https://www.youtube-nocookie.com/embed/videoseries?list=${video.playlistId}&autoplay=1&rel=0`
   : `https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0`;
-const poster = isPlaylist ? null : `https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`;
+const posterId = isPlaylist ? video.posterId : video.youtubeId;
+const poster = posterId ? `https://i.ytimg.com/vi/${posterId}/hqdefault.jpg` : null;
 const label = video.title ?? (isPlaylist ? 'Watch the playlist' : 'Watch the video');
 ---
 <div class="video">
   <button
-    class:list={['facade', { 'is-playlist': isPlaylist }]}
+    class:list={['facade', { 'no-poster': !poster }]}
     data-embed={embed}
     data-title={label}
     style={poster ? `background-image:url('${poster}')` : undefined}
@@ -54,7 +55,7 @@ const label = video.title ?? (isPlaylist ? 'Watch the playlist' : 'Watch the vid
     place-items: center;
     color: #fff;
   }
-  .facade.is-playlist {
+  .facade.no-poster {
     background-image: linear-gradient(135deg, var(--accent), #7c3aed 95%);
   }
   .facade::after {

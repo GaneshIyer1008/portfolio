@@ -65,6 +65,7 @@ export const projects: Project[] = [
     tags: ['Computer Vision', 'SLAM', 'OpenCV', 'RANSAC'],
     video: {
       playlistId: 'PL9LvgMznBv40a43pjhvMSbIP-hU3sikqC',
+      posterId: 'W7_cKB-Tfqw',
       title: 'Results across KITTI, Malaga, Parking & Polybahn',
     },
   },
