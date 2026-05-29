@@ -28,7 +28,7 @@
   --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
 
   /* Layout */
-  --container: 1080px;
+  --container: 1280px;
   --nav-h: 64px;
   --radius-sm: 8px;
   --radius: 14px;
