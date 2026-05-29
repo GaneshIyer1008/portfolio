@@ -33,6 +33,23 @@ export const projects: Project[] = [
     videoSoon: true,
   },
   {
+    title: 'Cloth Folding with a Multi-Task Diffusion Policy',
+    context: 'Robot Learning Course · ETH Zürich',
+    period: 'Spring 2026',
+    featured: true,
+    summary:
+      'Teaching a LeRobot SO-101 arm to fold a towel with a multi-task diffusion-transformer policy — assembled, teleoperated, trained and deployed on the real robot.',
+    highlights: [
+      'Assembled the SO-101 arm and collected ~200 teleoperated demonstrations, each performing three sub-tasks in succession: grasp a corner, first fold, second fold.',
+      'Trained a multi-task DiT policy (LeRobot): CLIP vision + text encoders condition a Diffusion Transformer that predicts action chunks from a single wrist-camera RGB feed and the language instruction.',
+      'Curated consistent demonstrations (similar joint trajectories, start and cloth positions, smooth motion) so the policy could learn all three stages.',
+      'Deployed on the real robot with asynchronous inference on a local RTX 4060 (8 GB): policy server at 5 FPS, robot client at 15 FPS to hide inference latency.',
+    ],
+    tags: ['Diffusion Policy', 'Imitation Learning', 'LeRobot', 'Manipulation'],
+    videoSoon: true,
+    links: [{ label: 'Code — GitHub', href: 'https://github.com/GaneshIyer1008/Robot_Learning_Cloth_Folding' }],
+  },
+  {
     title: 'Monocular Visual Odometry',
     context: 'VAMR · ETH Zürich',
     contextUrl: 'https://rpg.ifi.uzh.ch/teaching.html#VAMR',
