@@ -46,7 +46,7 @@ export const projects: Project[] = [
       'Deployed on the real robot with asynchronous inference on a local RTX 4060 (8 GB): policy server at 5 FPS, robot client at 15 FPS to hide inference latency.',
     ],
     tags: ['Diffusion Policy', 'Imitation Learning', 'LeRobot', 'Manipulation'],
-    videoSoon: true,
+    video: { youtubeId: 'KXIX6n430TI' },
     links: [{ label: 'Code — GitHub', href: 'https://github.com/GaneshIyer1008/Robot_Learning_Cloth_Folding' }],
   },
   {
@@ -68,30 +68,5 @@ export const projects: Project[] = [
       posterId: 'W7_cKB-Tfqw',
       title: 'Results across KITTI, Malaga, Parking & Polybahn',
     },
-  },
-  {
-    title: 'Koopman / DMD Control for Nonlinear Systems',
-    context: 'Bachelor Thesis · IIT Bombay',
-    period: 'Aug 2024 – Apr 2025',
-    summary: 'Data-driven control of nonlinear dynamics through Koopman operator theory.',
-    highlights: [
-      'Studied Koopman theory and data-driven control: DMD / EDMD, control variants (DMDc) and Hankel-based MPC.',
-      'Applied Koopman prediction to spring-mass, Van der Pol, pendulum and a two-link manipulator.',
-      'Used Koopman / DMD on simulation data of a planar soft robot to obtain approximate linear dynamics in a lifted space.',
-    ],
-    tags: ['Koopman', 'DMD', 'Control', 'MPC'],
-  },
-  {
-    title: 'Warehouse Drone — e-Yantra',
-    context: 'National Robotics Competition (eYRC)',
-    contextUrl: 'https://portal.e-yantra.org/',
-    period: 'Aug 2024 – Sep 2024',
-    summary: 'Autonomous quadcopter navigation through a simulated warehouse.',
-    highlights: [
-      'PID control of roll / pitch / yaw / throttle for a Swift Pico drone in Gazebo, with the ROS2 node and communication pipeline.',
-      'A* motion planning to navigate and control the drone through the warehouse environment.',
-      'Ranked 40 of 3000+ teams nationally and selected among the top 50 for the hardware phase.',
-    ],
-    tags: ['ROS2', 'PID Control', 'A*', 'Gazebo'],
   },
 ];

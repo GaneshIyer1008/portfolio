@@ -26,7 +26,6 @@ const label = video.title ?? (isPlaylist ? 'Watch the playlist' : 'Watch the vid
     <span class="play" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z" /></svg>
     </span>
-    {isPlaylist && <span class="badge">Playlist</span>}
     <span class="vtitle">{label}</span>
   </button>
 </div>
@@ -80,20 +79,6 @@ const label = video.title ?? (isPlaylist ? 'Watch the playlist' : 'Watch the vid
   }
   .play svg { width: 28px; height: 28px; margin-left: 2px; }
   .facade:hover .play { transform: scale(1.08); background: var(--accent); border-color: var(--accent); }
-  .badge {
-    position: absolute;
-    z-index: 1;
-    top: 0.7rem;
-    left: 0.7rem;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 0.22rem 0.5rem;
-    border-radius: 999px;
-    background: rgba(0, 0, 0, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-  }
   .vtitle {
     position: absolute;
     z-index: 1;
