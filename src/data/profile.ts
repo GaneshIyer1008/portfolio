@@ -5,14 +5,9 @@ export const profile = {
   location: 'Zürich, Switzerland',
   email: 'omkaar0791@gmail.com',
 
-  // Short intro shown in the hero.
-  intro:
-    'I teach legged and humanoid robots to move robustly in the real world, working where classical control meets modern reinforcement and imitation learning.',
-
-  // Longer bio shown in the About section (one <p> per array entry).
+  // Bio shown in the About section (one <p> per array entry).
   bio: [
-    "I'm a Master's student in Robotics, Systems & Control at ETH Zürich. My work sits at the intersection of classical control and modern learning — using reinforcement and imitation learning to give legged and humanoid robots robust, natural motion that transfers from simulation to hardware.",
-    'Right now I’m with NomadZ, ETH’s RoboCup team, building imitation-learning motion control for humanoid soccer robots. Previously I trained quadruped locomotion policies at xTerra Robotics and researched Voronoi-based path planning at NTU Singapore. I graduated with honors in Mechanical Engineering from IIT Bombay, ranked 2nd in my department.',
+    "I'm a Master's student in Robotics, Systems & Control at ETH Zürich, focused on learning-based control for legged and humanoid robots — giving them robust, natural motion that transfers from simulation to hardware.",
   ],
 
   focus: [

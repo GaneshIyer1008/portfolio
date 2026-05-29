@@ -14,7 +14,6 @@ const cv = withBase('cv.pdf');
       <p class="hello">Hi, I'm</p>
       <h1>{profile.name}</h1>
       <p class="role">{profile.role}</p>
-      <p class="intro">{profile.intro}</p>
       <div class="cta">
         <a href="#projects" class="btn btn-primary">View projects</a>
         <a href={cv} class="btn btn-ghost" target="_blank" rel="noopener">Download CV</a>
@@ -73,17 +72,11 @@ const cv = withBase('cv.pdf');
     color: var(--fg-strong);
     margin-top: 0.7rem;
   }
-  .intro {
-    color: var(--muted);
-    font-size: 1.05rem;
-    margin-top: 1rem;
-    max-width: 52ch;
-  }
   .cta {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    margin-block: 1.6rem 1.4rem;
+    margin-block: 1.8rem 1.4rem;
   }
 
   .hero-photo { justify-self: center; }
