@@ -1,21 +1,17 @@
 ---
-import VideoEmbed from './VideoEmbed.astro';
+import Media from './Media.astro';
 import type { Project } from '../data/projects';
 
 interface Props {
   project: Project;
 }
 const { project: p } = Astro.props;
-const hasMedia = Boolean(p.video || p.videoSoon);
+const hasMedia = Boolean(p.video || p.image || p.videoSoon);
 ---
 <article class:list={['card project', { featured: p.featured, 'has-media': hasMedia }]} data-reveal>
   {hasMedia && (
     <div class="media">
-      {p.video ? (
-        <VideoEmbed video={p.video} />
-      ) : (
-        <div class="soon"><span>🎬 Video coming soon</span></div>
-      )}
+      <Media video={p.video} image={p.image} alt={p.title} videoSoon={p.videoSoon} />
     </div>
   )}
 
@@ -100,17 +96,6 @@ const hasMedia = Boolean(p.video || p.videoSoon);
   .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1rem; }
   .links { margin-top: 0.9rem; display: flex; flex-wrap: wrap; gap: 1rem; }
   .link { font-size: 0.9rem; font-weight: 500; }
-
-  .soon {
-    display: grid;
-    place-items: center;
-    aspect-ratio: 16 / 9;
-    border-radius: var(--radius);
-    border: 1px dashed var(--border-strong);
-    background: var(--bg-soft);
-    color: var(--muted);
-    font-size: 0.9rem;
-  }
 
   @media (max-width: 820px) {
     .featured.has-media { grid-template-columns: 1fr; }

@@ -10,6 +10,7 @@ export interface Project {
   tags: string[];
   featured?: boolean;
   video?: Video;
+  image?: string;
   videoSoon?: boolean;
   links?: Link[];
 }

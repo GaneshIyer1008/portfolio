@@ -7,6 +7,8 @@
 //   https://youtu.be/Kl71MqVsgZI               -> youtubeId: 'Kl71MqVsgZI'
 //   https://youtube.com/playlist?list=PL9Lvg.. -> playlistId: 'PL9Lvg..'
 // If a video isn't ready yet, leave `video` out and set `videoSoon: true`.
+// To show a still image instead of a video, drop the file in `public/` and set
+//   image: 'voronoi.png'   (the filename in public/)
 
 export type Video = { youtubeId: string; title?: string } | { playlistId: string; title?: string };
 

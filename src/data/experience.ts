@@ -10,6 +10,7 @@ export interface Experience {
   highlights: string[];
   tags: string[];
   video?: Video;
+  image?: string;
   videoSoon?: boolean;
   links?: Link[];
 }
@@ -42,7 +43,7 @@ export const experience: Experience[] = [
       'Benchmarked against A*, RRT*, genetic-algorithm heuristics and a state-of-the-art 3D drone planner — Voronoi planning gave safer, shorter paths with fewer nodes.',
     ],
     tags: ['Path Planning', 'Computer Vision', 'Superquadrics', 'Voronoi'],
-    videoSoon: true,
+    image: 'voronoi.png',
     links: [
       {
         label: 'Resulting paper — ROBIO 2025',
