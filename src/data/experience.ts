@@ -23,7 +23,8 @@ export const experience: Experience[] = [
     location: 'India',
     orgUrl: 'https://xterrarobotics.com/',
     highlights: [
-      'Trained an RL locomotion policy for the Svan M2 quadruped via guided policy search with trajectory-tracking rewards from an offline planner, accelerating training.',
+      'Collected a 3-minute reference dataset by running a model-based controller on the Svan M2 hardware.',
+      'Trained an RL policy to imitate those reference trajectories — joint positions, velocities and torques, and foot placements — using trajectory-tracking rewards.',
       'Ran PPO in NVIDIA Isaac Gym with domain randomization for sim-to-real, validated in MuJoCo.',
       'Built a neural state estimator for base linear/angular velocity and height from the sensor buffer required by the policy.',
       'Deployed on Svan M2 hardware, achieving a trot gait (0.7 m/s forward, 0.5 m/s lateral, 1 rad/s yaw).',

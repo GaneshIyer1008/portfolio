@@ -23,13 +23,14 @@ export const projects: Project[] = [
     period: 'Feb 2026 – Present',
     featured: true,
     summary:
-      'Imitation-learning motion control for Booster K1 humanoid robots competing in RoboCup soccer.',
+      'Learning-based motion skills for Booster K1 humanoid robots competing in RoboCup soccer.',
     highlights: [
-      'Retarget custom-recorded human motion (walking, dribbling, kicking) onto the robot using GVHMR and GMR.',
-      'Trained a velocity-tracking locomotion policy and a dribbling policy that uses Adversarial Motion Priors (AMP) to encode natural style while satisfying the task objective, in NVIDIA Isaac Lab (MimicKit).',
+      'Retargeted custom-recorded human motion (walking, dribbling) onto the robot using GVHMR and GMR.',
+      'Trained velocity-tracking locomotion and dribbling policies that use Adversarial Motion Priors (AMP) to encode natural style, in NVIDIA Isaac Lab (MimicKit).',
+      'Trained a get-up (fall-recovery) policy with reinforcement learning — keyframe poses guide learning, with a multi-stage curriculum that introduces progressively harder fallen postures in later stages.',
       'Building deployment code for sim-to-real and integrating the policies with the vision and behaviour pipelines.',
     ],
-    tags: ['Imitation Learning', 'AMP', 'Humanoid', 'Isaac Lab'],
+    tags: ['Imitation Learning', 'Reinforcement Learning', 'AMP', 'Humanoid', 'Isaac Lab'],
     videoSoon: true,
   },
   {
