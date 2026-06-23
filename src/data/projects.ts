@@ -31,7 +31,7 @@ export const projects: Project[] = [
       'Building deployment code for sim-to-real and integrating the policies with the vision and behaviour pipelines.',
     ],
     tags: ['Imitation Learning', 'Reinforcement Learning', 'AMP', 'Humanoid', 'Isaac Lab'],
-    videoSoon: true,
+    video: { youtubeId: 'HrRJijhHrSc', title: 'Booster K1 policies in Isaac Lab' },
   },
   {
     title: 'Cloth Folding with a Diffusion Policy',
