@@ -41,7 +41,7 @@ export const experience: Experience[] = [
     highlights: [
       'Developed a novel algorithm to build Voronoi diagrams for superquadric obstacles, then ran Dijkstra on the resulting graph for efficient path planning.',
       'Extracted obstacle point clouds from a single environment image and fit superquadrics, validating on a physical maze of varied shapes.',
-      'Benchmarked against A*, RRT*, genetic-algorithm heuristics and a state-of-the-art 3D drone planner — Voronoi planning gave safer, shorter paths with fewer nodes.',
+      'Benchmarked against A*, RRT*, genetic-algorithm heuristics and a state-of-the-art 3D drone planner — Voronoi planning gave safer paths with fewer nodes.',
     ],
     tags: ['Path Planning', 'Computer Vision', 'Superquadrics', 'Voronoi'],
     image: 'voronoi.png',
